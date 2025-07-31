@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.png" />
@@ -7,6 +8,7 @@
     <title>Quote</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
@@ -47,7 +49,129 @@
         </ul>
     </div>
 
-    <main></main>
+    <main>
+        <div class="container">
+            <form id="quoteForm" class="step-form">
+                <!-- Step 1: Design -->
+                <section class="form-step" data-step="1">
+                    <h2>Select a Design</h2>
+                    <div class="card-grid">
+                        <div class="card clickable"><img src="images/design1.jpg" alt="Design 1">
+                            <p>Design 1</p>
+                        </div>
+                        <div class="card clickable"><img src="images/design2.jpg" alt="Design 2">
+                            <p>Design 2</p>
+                        </div>
+                        <div class="card clickable"><img src="images/design3.jpg" alt="Design 3">
+                            <p>Design 3</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2: Personal Data -->
+                <section class="form-step hidden" data-step="2">
+                    <h2>Personal Information</h2>
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                        <button type="button" class="next-step">Next</button>
+                    </div>
+                </section>
+
+                <!-- Step 3: Material -->
+                <section class="form-step hidden" data-step="3">
+                    <h2>Select Material</h2>
+                    <div class="card-grid">
+                        <div class="card clickable"><img src="images/steel.jpg" alt="Steel">
+                            <p>Steel</p>
+                        </div>
+                        <div class="card clickable"><img src="images/stainless.jpg" alt="Stainless">
+                            <p>Stainless Steel</p>
+                        </div>
+                        <div class="card clickable"><img src="images/aluminum.jpg" alt="Aluminum">
+                            <p>Aluminum</p>
+                        </div>
+                        <div class="card clickable"><img src="images/brass.jpg" alt="Brass">
+                            <p>Brass</p>
+                        </div>
+                        <div class="card clickable"><img src="images/iron.jpg" alt="Iron">
+                            <p>Iron</p>
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                    </div>
+                </section>
+
+                <!-- Step 4: Finishing -->
+                <section class="form-step hidden" data-step="4">
+                    <h2>Finishing</h2>
+                    <div class="card-grid">
+                        <div class="card clickable"><img src="images/polished.jpg" alt="Polished">
+                            <p>Polished</p>
+                        </div>
+                        <div class="card clickable"><img src="images/brushed.jpg" alt="Brushed">
+                            <p>Brushed</p>
+                        </div>
+                        <div class="card clickable"><img src="images/painted.jpg" alt="Painted">
+                            <p>Painted</p>
+                        </div>
+                        <div class="card clickable"><img src="images/powder.jpg" alt="Powder Coated">
+                            <p>Powder Coated</p>
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                    </div>
+                </section>
+
+                <!-- Step 5: Color -->
+                <section class="form-step hidden" data-step="5">
+                    <h2>Select Color</h2>
+                    <div class="color-picker-wrapper">
+                        <label for="colorInput">Pick a color:</label>
+                        <input type="color" id="colorInput" name="color" />
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                        <button type="button" class="next-step">Next</button>
+                    </div>
+                </section>
+
+                <!-- Step 6: Measure -->
+                <section class="form-step hidden" data-step="6">
+                    <h2>Measurements</h2>
+                    <input type="number" name="length" placeholder="Length (cm)" required>
+                    <input type="number" name="width" placeholder="Width (cm)" required>
+                    <input type="number" name="height" placeholder="Height (cm)" required>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                        <button type="button" class="next-step">Next</button>
+                    </div>
+                </section>
+
+                <!-- Step 7: Rendering -->
+                <section class="form-step hidden" data-step="7">
+                    <h2>Rendering</h2>
+                    <img src="images/rendering-placeholder.jpg" alt="Rendering Preview" class="preview-img">
+                    <div class="form-navigation">
+                        <button type="button" class="prev-step">Back</button>
+                        <button type="button" class="next-step">Next</button>
+                    </div>
+                </section>
+
+                <!-- Step 8: Quote Message -->
+                <section class="form-step hidden" data-step="8">
+                    <h2>Quote Sent</h2>
+                    <p>Your quote will be sent within 48 hours to your email.</p>
+                    <div class="done-icon">✔</div>
+                </section>
+            </form>
+        </div>
+    </main>
 
     <footer>
         <nav class="footer-menu">
@@ -67,6 +191,7 @@
     </footer>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>

@@ -24,3 +24,39 @@ function moveSlide(direction) {
   const slideWidth = slides[0].clientWidth;
   track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
+
+let currentStep = 1;
+
+document.querySelectorAll('.card.clickable').forEach(card => {
+  card.addEventListener('click', () => {
+    goToNextStep();
+  });
+});
+
+document.querySelectorAll('.next-step').forEach(button => {
+  button.addEventListener('click', () => {
+    goToNextStep();
+  });
+});
+
+document.querySelectorAll('.prev-step').forEach(button => {
+  button.addEventListener('click', () => {
+    goToPrevStep();
+  });
+});
+
+function goToPrevStep() {
+  const current = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+  if (current) current.classList.add('hidden');
+  currentStep--;
+  const prev = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+  if (prev) prev.classList.remove('hidden');
+}
+
+function goToNextStep() {
+  const current = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+  if (current) current.classList.add('hidden');
+  currentStep++;
+  const next = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+  if (next) next.classList.remove('hidden');
+}

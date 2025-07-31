@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -97,7 +98,7 @@ header {
   list-style: none;
   min-width: 160px;
   border-radius: 0.25rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
 
@@ -134,7 +135,7 @@ header {
   color: white;
   padding: 2rem;
   position: absolute;
-  top: 60px;          
+  top: 60px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -211,7 +212,7 @@ footer {
   font-size: 0.7rem;
 }
 
-.footer-menu .has-submenu:hover > .submenu {
+.footer-menu .has-submenu:hover>.submenu {
   display: block !important;
 }
 
@@ -244,7 +245,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 1rem;
@@ -288,7 +289,7 @@ footer {
 .service-card {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 280px;
   padding: 1rem;
   display: flex;
@@ -304,7 +305,8 @@ footer {
 
 .service-card img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* cuadrado */
+  aspect-ratio: 1 / 1;
+  /* cuadrado */
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -318,4 +320,113 @@ footer {
 .service-card p {
   font-size: 0.95rem;
   color: #555;
+}
+
+/* Quote styles */
+.step-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: white;
+  color: black;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.color-picker-wrapper label {
+  font-weight: bold;
+  color: #000;
+}
+
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="color"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px #000;
+}
+
+.next-step {
+  padding: 0.75rem 2rem;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.done-icon {
+  font-size: 3rem;
+  color: green;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.form-navigation button {
+  padding: 0.5rem 1rem;
 }
