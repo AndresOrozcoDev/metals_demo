@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metals Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-col">
+            <img src="https://via.placeholder.com/100x40?text=LOGO" alt="Logo de la empresa">
+        </div>
+        <div class="menu-col">
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="has-submenu">
+                        <a href="#">ABOUT US</a>
+                        <ul class="submenu">
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><a href="#">CAREERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-button" onclick="toggleMobileMenu()">☰</div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li>
+                <a href="#">ABOUT US</a>
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="#">GALLERY</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="images/carrousel_1.jpg" alt="Image 1" />
+                <img src="images/carrousel_2.jpg" alt="Image 2" />
+                <img src="images/carrousel_3.jpg" alt="Image 3" />
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="has-submenu">
+                    <a href="#">ABOUT US</a>
+                    <ul class="submenu">
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#">GALLERY</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
