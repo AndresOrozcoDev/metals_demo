@@ -32,6 +32,17 @@ main {
   background-color: #fff;
 }
 
+main .container {
+  padding-inline: 15%;
+  padding-block: 5rem;
+}
+
+main .container p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 footer {
   background-color: #000;
   color: white;
@@ -195,8 +206,9 @@ footer {
   color: white;
   text-decoration: none;
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
   display: inline-block;
+  font-size: 0.7rem;
 }
 
 .footer-menu .has-submenu:hover > .submenu {
